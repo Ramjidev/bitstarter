@@ -6,7 +6,7 @@ var buf = new Buffer("Hello World from index.html", "utf-8");
 //var buflength = buf.write("Hello World from index.html", "utf-8");
 //var bufText = buf.toString("utf-8", 0, buflength);
 
-fs.writeFileSync('index.html', buf.toString());
+fs.writeFileSync('index.html', buf.toString('utf-8'));
 
 app.get('/', function(request, response) {
   response.send('index.html');
