@@ -2,14 +2,10 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var buf = new Buffer("Hello World from index.html", "utf-8");
-//var buflength = buf.write("Hello World from index.html", "utf-8");
-//var bufText = buf.toString("utf-8", 0, buflength);
-
-fs.writeFileSync('index.html', buf.toString('utf-8'));
+var buf = new Buffer(fs.writeFileSync('index.html', "Hello World from index.html"), "utf-8");
 
 app.get('/', function(request, response) {
-  response.send('index.html');
+  response.send(buf.toString('utf-8'));
 });
 
 var port = process.env.PORT || 5000;
