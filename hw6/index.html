@@ -12,14 +12,12 @@
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
-        
     <style type="text/css">
 
       /* Large desktop */
       @media (min-width: 980px) { 
         body {
          padding-top: 60px;
-		 
         }
        .linediv-l {
          border-right: 1px white solid;
@@ -27,25 +25,10 @@
        .linediv-r {
          border-left: 1px white solid;
        }
-	  .logo{
-		  width: 15%;
-		  height: 15%;		  
-	  }
-
-
       }
-	  
-	  @media (min-width: 768px) and (max-width: 980px){
-	  .logo{
-		  width: 20%;
-		  height: 20%;		  
-	  }
-		  
-	 }
-	 
 
       /* Landscape phones and down */
-      @media (min-width: 480px) and (max-width: 768px) { 
+      @media (max-width: 480px) { 
        .copy {
          padding: 2.5% 10%;
        }
@@ -55,33 +38,13 @@
        .linediv-r {
          border-top: 1px white solid;
        }
-	  .logo{
-		  width: 25%;
-		  height: 25%;		  
-	  }
-      }
-	  
-	  @media (max-width: 480px) { 
-       .copy {
-         padding: 2.5% 10%;
-       }
-       .linediv-l {
-         border-bottom: 1px white solid;
-       }
-       .linediv-r {
-         border-top: 1px white solid;
-       }
-	  .logo{
-		  width: 25%;
-		  height: 25%;		  
-	  }
       }
 
       /* All form factors */
 
       /* Main body and headings */
       body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 		background-image:url(http://i1344.photobucket.com/albums/p649/ramji134/hw4_bg_zps9b346392.png);
 		background-repeat:no-repeat;
 		background-size:contain;
@@ -137,11 +100,34 @@
       .footer a {
         color: #ccccff;
       }
-	  .navbar-style{
+	  	.navbar-style{
 		background:#900;
 		
 		}
+		
+		/* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+		div.addthis_toolbox {
+			width: 180px;
+			margin: 0 auto;
+			}   
     </style>
+	
+	<!--ga.js-->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+
   </head>
   <body>
 
@@ -177,7 +163,7 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <img class="logo" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_1_zps671a2f80.png">
+          <img class="logo" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_1_zps671a2f80.png" alt="Eifi logo">
           <h1>EiFi</h1>
         </div>
       </div> 
@@ -189,14 +175,13 @@
         </div>
       </div>
       <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_1_zpsb21529c3.png">
-        </div>
+        <div class="span5 offset1 video"><img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_1_zpsb21529c3.png" alt="http://i1344.photobucket.com/albums/p649/ramji134/hw4_1_zpsb21529c3.png"></div>
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
+          <div class="row-fluid">
           <div class="span8 offset2">
-            <div class="statistics">
+            <div class="row-fluid statistics">
               <div class="span4">
                 <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
@@ -217,6 +202,7 @@
               </div>
             </div>
           </div>
+          <div class="row-fluid">
           <div class="span10 offset1">
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
@@ -225,17 +211,35 @@
               <div class="bar bar-warning" style="width: 97%;"></div>
             </div>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span6 offset3 order">
             <!-- Standard Bootstrap button. -->
             <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
+            <!--<button class="btn btn-success btn-large">Preorder with Bitcoin</button>-->
+				<!--Bitcoin - MtGox-->
+				<span class="mtgox" data-id="4f477c53-8e18-4afd-a688-9aea01f4c961" data-amount="0.1" data-currency="BTC"><a href="https://payment.mtgox.com/4f477c53-8e18-4afd-a688-9aea01f4c961"><img src="https://payment.mtgox.com/img/mtgox-checkout.png" border="0" />Preorder with Bitcoin</a></span>
+				<![if !IE]><script type="text/javascript" src="https://payment.mtgox.com/js/button.min.js"></script><![endif]>
+							
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                <a class="addthis_button_preferred_1"></a>
+                <a class="addthis_button_preferred_2"></a>
+                <a class="addthis_button_preferred_3"></a>
+                <a class="addthis_button_preferred_4"></a>
+                <a class="addthis_button_compact"></a>
+                <a class="addthis_counter addthis_bubble_style"></a>
+            </div>
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5201ff797e686a69"></script>
+            <!-- AddThis Button END -->
           </div>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -244,25 +248,17 @@
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_3_zps07827cfe.jpg">
-        </div>
+        <div class="span5 offset1 asset"><img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_3_zps07827cfe.jpg" alt="http://i1344.photobucket.com/albums/p649/ramji134/hw4_3_zps07827cfe.jpg"></div>
         <div class="span5 copy">
-          <p>
-			WiFi - a technology available in all mobile devices such smartphones, tablets annd laptop to connect between devices. It has a range of 20 meters for indoors and a greater outdoor range. Eifi as an application helps connect people to make Wifi calls and share data. 
-          </p>
+          <p> WiFi - a technology available in all mobile devices such smartphones, tablets annd laptop to connect between devices. It has a range of 20 meters for indoors and a greater outdoor range. Eifi as an application helps connect people to make Wifi calls and share data. </p>
         </div>
       </div>
 
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
-          <p>
-            As a multiplatform application, Eifi can be accessed in all devices, which paves way to explore, communicate and share images, music, video and documents within the wireless connection range. For further information about Eifi Please check our FAQ.
-          </p>
+          <p>As a multiplatform application, Eifi can be accessed in all devices, which paves way to explore, communicate and share images, music, video and documents within the wireless connection range. For further information about Eifi Please check our FAQ. </p>
         </div>
-        <div class="span5 asset">
-        	<img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_2_zps25fdfdb2.jpg">  
-        </div>
+        <div class="span5 asset"><img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_2_zps25fdfdb2.jpg" alt="http://i1344.photobucket.com/albums/p649/ramji134/hw4_2_zps25fdfdb2.jpg"></div>
       </div>
 
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
@@ -276,12 +272,12 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    What is Wifi?
-                  </a>
+                  What is Wifi?
+                </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Wi-Fi refers to “wireless fidelity”. It is a way to access the Internet or a network via wireless connections. 
+                    Wi-Fi refers to “wireless fidelity”. It is a way to access the Internet or a network via wireless connections.
                   </div>
                 </div>
               </div>
@@ -297,19 +293,17 @@
                     Yes, Eifi functions through wifi.
                   </div>
                 </div>
-              </div>
-              <div class="accordion-group">
+                <div class="accordion-group">
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion3" href="#collapseThree">
-                    Is Eifi an application to make calls or share data?
-                  </a>
+                     data-parent="#accordion2" href="#collapseTwo">
+                   Is Eifi an application to make calls or share data?
+                 </a>
                 </div>
-                <div id="collapseThree" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    Using Eifi, you can do both. 
-                  </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                  <div class="accordion-inner">Using Eifi, you can do both. </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -327,5 +321,16 @@
         </div>
       </div>
     </div>
+	<!--analytics.js-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-43042020-1', 'herokuapp.com');
+	  ga('send', 'pageview');
+
+	</script>
   </body>
 </html>
