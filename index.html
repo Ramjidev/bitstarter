@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>Eifi - Explore Connnections</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -44,7 +44,10 @@
 
       /* Main body and headings */
       body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      background-image:url(http://i1344.photobucket.com/albums/p649/ramji134/hw4_bg_zps9b346392.png);
+      background-repeat:no-repeat;
+      background-size:contain;
       }
       .heading, .subheading {
         font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
@@ -97,26 +100,34 @@
       .footer a {
         color: #ccccff;
       }
-
-     /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
-     div.addthis_toolbox {
-      width: 174px;
+      .navbar-style{
+      background:#900;
+      
+      }
+      
+      /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+      div.addthis_toolbox {
+      width: 180px;
       margin: 0 auto;
-     }
+      }   
     </style>
-<script type="text/javascript">
+    
+    <!--ga.js-->
+    <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-42843113-1']);
-  _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+	  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+	  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
 
-</script>
+	</script>
+
+
   </head>
   <body>
 
@@ -135,7 +146,6 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
               <li><a href="/orders">Orders</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -153,20 +163,19 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product: Development Version</h1>
+          <img class="logo" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_1_zps671a2f80.png" alt="Eifi logo">
+          <h1>EiFi</h1>
         </div>
       </div> 
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
+          <p class="lead">Explore Connections</p>
         </div>
       </div>
       <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
+        <div class="span5 offset1 video"><img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_1_zpsb21529c3.png" alt="http://i1344.photobucket.com/albums/p649/ramji134/hw4_1_zpsb21529c3.png"></div>
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
@@ -183,7 +192,7 @@
               </div>
               <div class="span4">
                 <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
+                  <h3>$1000</h3> <p>of $180,000</p>
                 </div>
               </div>
               <div class="span4">
@@ -198,29 +207,33 @@
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
             <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
+              <div class="bar bar-success" style="width: 03%;"></div>
+              <div class="bar bar-warning" style="width: 97%;"></div>
             </div>
           </div>
           </div>
           <div class="row-fluid">
           <div class="span6 offset3 order">
-	    <a class="coinbase-button" data-button-style="custom_large" data-button-text="Preorder with Bitcoin" data-code="13b56883764b54e6ab56fef3bcc7229c" href="https://coinbase.com/checkouts/13b56883764b54e6ab56fef3bcc7229c">Preorder with Bitcoin</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
-	  </div>
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+            <!--<button class="btn btn-success btn-large">Preorder with Bitcoin</button>-->
+	    <!--Bitcoin - Coinbase-->
+	    <a class="coinbase-button" data-code="0f832232b9d5ed8c19a5922339d3dae9" data-button-style="custom_large" href="https://coinbase.com/checkouts/0f832232b9d5ed8c19a5922339d3dae9">Preorder With Bitcoin</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+          </div>
           </div>
           <div class="row-fluid">
           <div class="span8 offset2 social">
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-              <a class="addthis_button_preferred_1"></a>
-              <a class="addthis_button_preferred_2"></a>
-              <a class="addthis_button_compact"></a>
-              <a class="addthis_counter addthis_bubble_style"></a>
+                <a class="addthis_button_preferred_1"></a>
+                <a class="addthis_button_preferred_2"></a>
+                <a class="addthis_button_preferred_3"></a>
+                <a class="addthis_button_preferred_4"></a>
+                <a class="addthis_button_compact"></a>
+                <a class="addthis_counter addthis_bubble_style"></a>
             </div>
-	     <script type="text/javascript">var addthis_config = 
-	      {"data_track_addressbar":true};</script>
-	     <script type="text/javascript" 
- 		     src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51e5f5d9549fdf9b"></script>
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5201ff797e686a69"></script>
             <!-- AddThis Button END -->
           </div>
           </div>
@@ -233,45 +246,17 @@
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
+        <div class="span5 offset1 asset"><img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_3_zps07827cfe.jpg" alt="http://i1344.photobucket.com/albums/p649/ramji134/hw4_3_zps07827cfe.jpg"></div>
         <div class="span5 copy">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
+          <p> WiFi - a technology available in all mobile devices such smartphones, tablets annd laptop to connect between devices. It has a range of 20 meters for indoors and a greater outdoor range. Eifi as an application helps connect people to make Wifi calls and share data wth augmented reality. Eifi will use internet if needed else it utilizes Direct Wifi to communicate, this increase the connectivity and 24/7 presence to our friends. Using Direct Wifi, Eifi gives you the free call option within our staying circle.</p>
         </div>
       </div>
 
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
+          <p>As a multiplatform application, Eifi can be accessed in all devices, which paves way to explore, communicate and share images, music, video and documents within the wireless connection range. For further information about Eifi Please check our FAQ. </p>
         </div>
-        <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
+        <div class="span5 asset"><img class="img-polaroid" src="http://i1344.photobucket.com/albums/p649/ramji134/hw4_2_zps25fdfdb2.jpg" alt="http://i1344.photobucket.com/albums/p649/ramji134/hw4_2_zps25fdfdb2.jpg"></div>
       </div>
 
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
@@ -285,12 +270,12 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    What does FAQ stand for?
-                  </a>
+                  What is Wifi?
+                </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Frequently Asked Question.
+                    Wi-Fi refers wireless . It is a way to access the Internet or a network via wireless connections.
                   </div>
                 </div>
               </div>
@@ -298,18 +283,40 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-                    What's a Frequently Asked Question?
+                    Do I need wifi to access Eifi?
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    A question which is commonly asked by users.
+                    Yes, Eifi functions through wifi.
+                  </div>
+                </div>
+                <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseThree">
+                   Is Eifi an application to make calls or share data?
+                 </a>
+                </div>
+                <div id="collapseThree" class="accordion-body collapse">
+                  <div class="accordion-inner">Using Eifi, you can do both. </div>
+                </div>
+              </div>
+		  <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseFour">
+                    Whether Eifi can be used in a wide range?
+                  </a>
+                </div>
+                <div id="collapseFour" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    Yes, but it depends on the Wifi connections. For eg., In a heavily populated area you can use Eifi to find the friends and call them for free and doesn't require internet connection.
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
       </div>
 
       <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
@@ -324,16 +331,17 @@
         </div>
       </div>
     </div>
+      <!--analytics.js-->
+      <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-43042020-1', 'herokuapp.com');
+	    ga('send', 'pageview');
 
-  ga('create', 'UA-42843113-1', 'bitstart.net');
-  ga('send', 'pageview');
-
-</script>
+	  </script>
   </body>
 </html>
+ 
